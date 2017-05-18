@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24AA73690ABA276D8B4B2F38 /* libPods-CircleProgressBarDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A857BF2440AD8D85FFE26CD2 /* libPods-CircleProgressBarDemo.a */; };
+		6BA57C871CCE4729007F55FC /* libPods-CircleProgressBarDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14EEBCD8C4334DFE32120DDF /* libPods-CircleProgressBarDemoTests.a */; };
 		BA2831831AB88E2400497BFD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2831821AB88E2400497BFD /* main.m */; };
 		BA28318C1AB88E2400497BFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA28318A1AB88E2400497BFD /* Main.storyboard */; };
 		BA28318E1AB88E2400497BFD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA28318D1AB88E2400497BFD /* Images.xcassets */; };
@@ -28,6 +30,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14EEBCD8C4334DFE32120DDF /* libPods-CircleProgressBarDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CircleProgressBarDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9783A404447E147958287E75 /* Pods-CircleProgressBarDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircleProgressBarDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CircleProgressBarDemo/Pods-CircleProgressBarDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		A857BF2440AD8D85FFE26CD2 /* libPods-CircleProgressBarDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CircleProgressBarDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA28317D1AB88E2400497BFD /* CircleProgressBarDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircleProgressBarDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA2831811AB88E2400497BFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA2831821AB88E2400497BFD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -43,6 +48,9 @@
 		BA2831AD1AB88E9500497BFD /* DemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
 		BA2831AE1AB88E9500497BFD /* DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
 		BA2831B21AB88EC600497BFD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DFC6762C53C8265E0160FF16 /* Pods-CircleProgressBarDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircleProgressBarDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CircleProgressBarDemo/Pods-CircleProgressBarDemo.release.xcconfig"; sourceTree = "<group>"; };
+		E50B629DE956A6EEDCA23F3B /* Pods-CircleProgressBarDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircleProgressBarDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CircleProgressBarDemoTests/Pods-CircleProgressBarDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EA0D4F78E303AEA4D730D331 /* Pods-CircleProgressBarDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircleProgressBarDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CircleProgressBarDemoTests/Pods-CircleProgressBarDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +59,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA2831B31AB88EC600497BFD /* QuartzCore.framework in Frameworks */,
+				24AA73690ABA276D8B4B2F38 /* libPods-CircleProgressBarDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +67,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BA57C871CCE4729007F55FC /* libPods-CircleProgressBarDemoTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6141B7562B655C60B3EE9F3E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9783A404447E147958287E75 /* Pods-CircleProgressBarDemo.debug.xcconfig */,
+				DFC6762C53C8265E0160FF16 /* Pods-CircleProgressBarDemo.release.xcconfig */,
+				E50B629DE956A6EEDCA23F3B /* Pods-CircleProgressBarDemoTests.debug.xcconfig */,
+				EA0D4F78E303AEA4D730D331 /* Pods-CircleProgressBarDemoTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BA2831741AB88E2400497BFD = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +92,7 @@
 				BA2831991AB88E2400497BFD /* CircleProgressBarDemoTests */,
 				BA28317E1AB88E2400497BFD /* Products */,
 				BA2831B41AB8905100497BFD /* Frameworks */,
+				6141B7562B655C60B3EE9F3E /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -153,6 +175,8 @@
 			isa = PBXGroup;
 			children = (
 				BA2831B21AB88EC600497BFD /* QuartzCore.framework */,
+				A857BF2440AD8D85FFE26CD2 /* libPods-CircleProgressBarDemo.a */,
+				14EEBCD8C4334DFE32120DDF /* libPods-CircleProgressBarDemoTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -164,9 +188,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA2831A01AB88E2400497BFD /* Build configuration list for PBXNativeTarget "CircleProgressBarDemo" */;
 			buildPhases = (
+				BB5CDF38FF49F0B985449C7C /* [CP] Check Pods Manifest.lock */,
 				BA2831791AB88E2400497BFD /* Sources */,
 				BA28317A1AB88E2400497BFD /* Frameworks */,
 				BA28317B1AB88E2400497BFD /* Resources */,
+				CB4708B2D26A6C2DDE5DC62B /* [CP] Embed Pods Frameworks */,
+				2E0173EABFAE0FEAFD9508EB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -181,9 +208,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA2831A31AB88E2400497BFD /* Build configuration list for PBXNativeTarget "CircleProgressBarDemoTests" */;
 			buildPhases = (
+				59B4A024B2253477BBED35D8 /* [CP] Check Pods Manifest.lock */,
 				BA2831921AB88E2400497BFD /* Sources */,
 				BA2831931AB88E2400497BFD /* Frameworks */,
 				BA2831941AB88E2400497BFD /* Resources */,
+				372FFE6A8C7D9567764CAEC1 /* [CP] Embed Pods Frameworks */,
+				46017F3EAECEA548E55ABA75 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,6 +280,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2E0173EABFAE0FEAFD9508EB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CircleProgressBarDemo/Pods-CircleProgressBarDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		372FFE6A8C7D9567764CAEC1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CircleProgressBarDemoTests/Pods-CircleProgressBarDemoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		46017F3EAECEA548E55ABA75 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CircleProgressBarDemoTests/Pods-CircleProgressBarDemoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		59B4A024B2253477BBED35D8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BB5CDF38FF49F0B985449C7C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CB4708B2D26A6C2DDE5DC62B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CircleProgressBarDemo/Pods-CircleProgressBarDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BA2831791AB88E2400497BFD /* Sources */ = {
@@ -372,6 +495,7 @@
 		};
 		BA2831A11AB88E2400497BFD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9783A404447E147958287E75 /* Pods-CircleProgressBarDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -385,6 +509,7 @@
 		};
 		BA2831A21AB88E2400497BFD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFC6762C53C8265E0160FF16 /* Pods-CircleProgressBarDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -398,6 +523,7 @@
 		};
 		BA2831A41AB88E2400497BFD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E50B629DE956A6EEDCA23F3B /* Pods-CircleProgressBarDemoTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -418,6 +544,7 @@
 		};
 		BA2831A51AB88E2400497BFD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA0D4F78E303AEA4D730D331 /* Pods-CircleProgressBarDemoTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
