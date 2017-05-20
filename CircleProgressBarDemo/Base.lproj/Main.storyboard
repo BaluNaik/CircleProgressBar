@@ -36,6 +36,81 @@
                                     <constraint firstAttribute="width" constant="240" id="BWS-1N-q6Q"/>
                                     <constraint firstAttribute="height" constant="240" id="HJA-XY-ePX"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="startAngle">
+                                        <real key="value" value="180"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="progressBarProgressColor">
+                                        <color key="value" red="0.47450980392156861" green="0.82745098039215681" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="progressBarTrackColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="hintViewBackgroundColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yiy-3Y-b3M" customClass="CircleProgressBar">
+                                <rect key="frame" x="63.5" y="155.5" width="250" height="250"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="CW9-2W-sJS"/>
+                                    <constraint firstAttribute="height" constant="250" id="DdQ-4h-G1L"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="startAngle">
+                                        <real key="value" value="180"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="progressBarProgressColor">
+                                        <color key="value" red="0.47450980390000003" green="0.82745098039999998" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="progressBarTrackColor">
+                                        <color key="value" red="1" green="0.94509803921568625" blue="0.6588235294117647" alpha="0.26626712328767121" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="hintViewBackgroundColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hintHidden" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="hintTextColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kej-AT-9ln" customClass="CircleProgressBar">
+                                <rect key="frame" x="67.5" y="163.5" width="240" height="240"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="DCg-gh-Qw2"/>
+                                    <constraint firstAttribute="height" constant="240" id="TtX-xy-myw"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="startAngle">
+                                        <real key="value" value="180"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="progressBarProgressColor">
+                                        <color key="value" red="0.47450980390000003" green="0.82745098039999998" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="progressBarTrackColor">
+                                        <color key="value" red="0.84792363640000001" green="0.35185893820000003" blue="0.40256241199999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="hintViewBackgroundColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hintHidden" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="hintTextColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AeC-xc-gOE">
                                 <rect key="frame" x="16" y="523" width="343" height="40"/>
@@ -87,11 +162,13 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="khC-c9-Lte" secondAttribute="trailing" constant="16" id="3LJ-MT-2IZ"/>
                             <constraint firstItem="AeC-xc-gOE" firstAttribute="leading" secondItem="d6U-G1-1y8" secondAttribute="leading" constant="16" id="4Ld-mX-AQW"/>
+                            <constraint firstItem="yiy-3Y-b3M" firstAttribute="top" secondItem="Whh-CX-dwE" secondAttribute="bottom" constant="-248" id="5Bc-7s-YpB"/>
                             <constraint firstItem="khC-c9-Lte" firstAttribute="top" secondItem="6iv-0Y-K4v" secondAttribute="bottom" constant="8" id="7HP-Xf-KH7"/>
                             <constraint firstItem="khC-c9-Lte" firstAttribute="trailing" secondItem="d6U-G1-1y8" secondAttribute="trailingMargin" id="AR8-L3-DdO"/>
                             <constraint firstItem="Whh-CX-dwE" firstAttribute="top" secondItem="R7s-Af-mdA" secondAttribute="bottom" id="IeQ-6f-Wcs"/>
                             <constraint firstItem="Whh-CX-dwE" firstAttribute="leading" secondItem="d6U-G1-1y8" secondAttribute="leadingMargin" constant="-16" id="Ihs-Fp-WVj"/>
                             <constraint firstAttribute="centerX" secondItem="Whh-CX-dwE" secondAttribute="centerX" id="N7W-x5-Uvj"/>
+                            <constraint firstItem="Whh-CX-dwE" firstAttribute="leading" secondItem="yiy-3Y-b3M" secondAttribute="trailing" constant="-246" id="Nre-gS-52Y"/>
                             <constraint firstItem="AeC-xc-gOE" firstAttribute="leading" secondItem="d6U-G1-1y8" secondAttribute="leadingMargin" id="Nzr-nV-FKV"/>
                             <constraint firstItem="6iv-0Y-K4v" firstAttribute="leading" secondItem="d6U-G1-1y8" secondAttribute="leadingMargin" id="OJu-At-VwE"/>
                             <constraint firstItem="khC-c9-Lte" firstAttribute="leading" secondItem="d6U-G1-1y8" secondAttribute="leading" constant="16" id="Oic-Sa-nQq"/>
@@ -105,9 +182,11 @@
                             <constraint firstAttribute="trailingMargin" secondItem="NCE-Kn-QnB" secondAttribute="trailing" constant="-16" id="mEf-La-4ea"/>
                             <constraint firstAttribute="trailing" secondItem="6iv-0Y-K4v" secondAttribute="trailing" constant="16" id="pyj-ni-elF"/>
                             <constraint firstItem="AeC-xc-gOE" firstAttribute="trailing" secondItem="d6U-G1-1y8" secondAttribute="trailingMargin" id="qbO-vX-3XS"/>
+                            <constraint firstItem="Whh-CX-dwE" firstAttribute="leading" secondItem="kej-AT-9ln" secondAttribute="trailing" constant="-240" id="rNB-Ch-LpC"/>
                             <constraint firstItem="GW1-8N-9u4" firstAttribute="top" secondItem="khC-c9-Lte" secondAttribute="bottom" constant="8" id="rxB-4W-xK1"/>
                             <constraint firstItem="6iv-0Y-K4v" firstAttribute="leading" secondItem="d6U-G1-1y8" secondAttribute="leading" constant="16" id="xDY-11-4y6"/>
                             <constraint firstItem="NCE-Kn-QnB" firstAttribute="top" secondItem="R7s-Af-mdA" secondAttribute="bottom" constant="0.5" id="xTO-cq-L7N"/>
+                            <constraint firstItem="kej-AT-9ln" firstAttribute="top" secondItem="Whh-CX-dwE" secondAttribute="bottom" constant="-240" id="xUs-96-9fd"/>
                             <constraint firstAttribute="centerY" secondItem="Whh-CX-dwE" secondAttribute="centerY" constant="50" id="ypr-cG-NtN"/>
                             <constraint firstItem="khC-c9-Lte" firstAttribute="leading" secondItem="d6U-G1-1y8" secondAttribute="leadingMargin" id="zBB-v9-x6A"/>
                         </constraints>
@@ -129,6 +208,8 @@
                     </view>
                     <connections>
                         <outlet property="circleProgressBar" destination="Whh-CX-dwE" id="MU0-zy-mDg"/>
+                        <outlet property="circleProgressBar1" destination="yiy-3Y-b3M" id="pCY-Sv-tY5"/>
+                        <outlet property="circleProgressBar2" destination="kej-AT-9ln" id="j76-nf-zEy"/>
                         <outlet property="customizeButton" destination="khC-c9-Lte" id="Xgw-TZ-QpK"/>
                     </connections>
                 </viewController>

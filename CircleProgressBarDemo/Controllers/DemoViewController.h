@@ -19,6 +19,9 @@ typedef enum : NSUInteger {
 @interface DemoViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet CircleProgressBar *circleProgressBar;
+@property (weak, nonatomic) IBOutlet CircleProgressBar *circleProgressBar1;
+@property (weak, nonatomic) IBOutlet CircleProgressBar *circleProgressBar2;
+    
 @property (weak, nonatomic) IBOutlet UIButton *customizeButton;
 
 - (IBAction)increaseProgress:(id)sender;

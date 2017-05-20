@@ -25,6 +25,8 @@ typedef NSAttributedString*(^AttributedStringGenerationBlock)(CGFloat progress);
 IB_DESIGNABLE
 @interface CircleProgressBar : UIView
 
+/// @brief circle Radiu 360/180 of Progress Bar (360 full circle and 180 half circle)
+@property (nonatomic) IBInspectable CGFloat circleRadiu;
 /// @brief Width of Progress Bar
 @property (nonatomic) IBInspectable CGFloat progressBarWidth;
 /// @brief Progress color in Progress Bar

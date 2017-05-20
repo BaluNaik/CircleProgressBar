@@ -9,7 +9,9 @@
 #import "CircleProgressBar.h"
 
 // Common
+
 #define DEGREES_TO_RADIANS(angle) ((angle) / 180.0 * M_PI)
+#define DEGREES_TO_RADIANS_REVERSE(angle) ((angle) / -180.0 * M_PI)
 
 // Progress Bar Defaults
 #define DefaultProgressBarProgressColor [UIColor colorWithRed:0.71 green:0.099 blue:0.099 alpha:0.7]
@@ -26,7 +28,7 @@ const StringGenerationBlock DefaultHintTextGenerationBlock = ^NSString *(CGFloat
 };
 
 // Animation Constants
-const CGFloat AnimationChangeTimeDuration = 0.2f;
+const CGFloat AnimationChangeTimeDuration = 1.0f;
 const CGFloat AnimationChangeTimeStep = 0.01f;
 
 @interface CircleProgressBar (Private)
@@ -107,7 +109,7 @@ const CGFloat AnimationChangeTimeStep = 0.01f;
     
     CGPoint innerCenter = CGPointMake(self.bounds.size.width / 2, self.bounds.size.height / 2);
     CGFloat radius = MIN(innerCenter.x, innerCenter.y);
-    CGFloat currentProgressAngle = (_progress * 360) + _startAngle;
+    CGFloat currentProgressAngle = (_progress * _circleRadiu) + _startAngle;
     
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextClearRect(context, rect);
@@ -218,15 +220,27 @@ const CGFloat AnimationChangeTimeStep = 0.01f;
     
     CGContextSetFillColorWithColor(context, self.progressBarProgressColorForDrawing.CGColor);
     CGContextBeginPath(context);
-    CGContextAddArc(context, center.x, center.y, radius, DEGREES_TO_RADIANS(_startAngle), DEGREES_TO_RADIANS(progressAngle), 0);
-    CGContextAddArc(context, center.x, center.y, radius - barWidth, DEGREES_TO_RADIANS(progressAngle), DEGREES_TO_RADIANS(_startAngle), 1);
+    if (self.circleRadiu > 0){
+        CGContextAddArc(context, center.x, center.y, radius, DEGREES_TO_RADIANS(_startAngle), DEGREES_TO_RADIANS(progressAngle), 0);
+        CGContextAddArc(context, center.x, center.y, radius - barWidth, DEGREES_TO_RADIANS(progressAngle), DEGREES_TO_RADIANS(_startAngle), 1);
+    }else{
+        CGContextAddArc(context, center.x, center.y, radius, DEGREES_TO_RADIANS_REVERSE(_startAngle), DEGREES_TO_RADIANS_REVERSE(progressAngle), 0);
+        CGContextAddArc(context, center.x, center.y, radius - barWidth, DEGREES_TO_RADIANS_REVERSE(progressAngle), DEGREES_TO_RADIANS_REVERSE(_startAngle), 1);
+    }
+    
     CGContextClosePath(context);
     CGContextFillPath(context);
     
     CGContextSetFillColorWithColor(context, self.progressBarTrackColorForDrawing.CGColor);
     CGContextBeginPath(context);
-    CGContextAddArc(context, center.x, center.y, radius, DEGREES_TO_RADIANS(progressAngle), DEGREES_TO_RADIANS(_startAngle + 360), 0);
-    CGContextAddArc(context, center.x, center.y, radius - barWidth, DEGREES_TO_RADIANS(_startAngle + 360), DEGREES_TO_RADIANS(progressAngle), 1);
+    if (self.circleRadiu > 0){
+        CGContextAddArc(context, center.x, center.y, radius, DEGREES_TO_RADIANS(progressAngle), DEGREES_TO_RADIANS(_startAngle + _circleRadiu), 0);
+        CGContextAddArc(context, center.x, center.y, radius - barWidth, DEGREES_TO_RADIANS(_startAngle + _circleRadiu), DEGREES_TO_RADIANS(progressAngle), 1);
+    }else{
+        CGContextAddArc(context, center.x, center.y, radius, DEGREES_TO_RADIANS_REVERSE(progressAngle), DEGREES_TO_RADIANS_REVERSE(_startAngle + _circleRadiu), 0);
+        CGContextAddArc(context, center.x, center.y, radius - barWidth, DEGREES_TO_RADIANS_REVERSE(_startAngle + _circleRadiu), DEGREES_TO_RADIANS_REVERSE(progressAngle), 1);
+
+    }
     CGContextClosePath(context);
     CGContextFillPath(context);
 }
@@ -273,7 +287,7 @@ const CGFloat AnimationChangeTimeStep = 0.01f;
     
     CGContextSetFillColorWithColor(context, self.hintViewBackgroundColorForDrawing.CGColor);
     CGContextBeginPath(context);
-    CGContextAddArc(context, center.x, center.y, radius - barWidth - self.hintViewSpacingForDrawing, DEGREES_TO_RADIANS(0), DEGREES_TO_RADIANS(360), 1);
+    CGContextAddArc(context, center.x, center.y, radius - barWidth - self.hintViewSpacingForDrawing, DEGREES_TO_RADIANS(0), DEGREES_TO_RADIANS(_circleRadiu), 1);
     CGContextClosePath(context);
     CGContextFillPath(context);
     

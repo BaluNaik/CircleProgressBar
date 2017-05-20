@@ -23,14 +23,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    _circleProgressBar1.circleRadiu = 180.0;
+    _circleProgressBar.circleRadiu = 180.0;
+    _circleProgressBar2.circleRadiu = 180.0;
+    //_circleProgressBar2.progressBarTrackColor = [UIColor clearColor];
+    _circleProgressBar2.progressBarProgressColor = [UIColor clearColor];
 }
-
+-(void)viewDidAppear:(BOOL)animated{
+    [_circleProgressBar setProgress:(0.75) animated:YES];
+    [_circleProgressBar2 setProgress:(0.75) animated:YES];
+    
+}
 - (IBAction)increaseProgress:(id)sender {
     [_circleProgressBar setProgress:(_circleProgressBar.progress + 0.06f) animated:YES];
+    [_circleProgressBar2 setProgress:(_circleProgressBar2.progress + 0.06f) animated:YES];
+    
 }
 
 - (IBAction)decreaseProgress:(id)sender {
+    
     [_circleProgressBar setProgress:(_circleProgressBar.progress - 0.06f) animated:YES];
+    
+    [_circleProgressBar2 setProgress:(_circleProgressBar2.progress - 0.06f) animated:YES];
+    
 }
 
 - (IBAction)customizeNext:(id)sender {
